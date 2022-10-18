@@ -16,6 +16,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.Map("/", async (context) =>
+{
+    await Task.Delay(1000);
+});
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
